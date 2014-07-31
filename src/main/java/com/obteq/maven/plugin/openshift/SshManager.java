@@ -42,11 +42,11 @@ public class SshManager {
         session = jsch.getSession(userName, remoteHost, 22);
         session.setUserInfo(new UserInfo() {
             public String getPassphrase() {
-                return null;
+                return password;// null;
             }
 
             public String getPassword() {
-                return password;
+                return null;// password;
             }
 
             public boolean promptPassphrase(String arg0) {
