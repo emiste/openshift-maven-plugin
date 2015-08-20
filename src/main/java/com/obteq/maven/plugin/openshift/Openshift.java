@@ -47,7 +47,7 @@ public class Openshift extends AbstractMojo {
 
             File[] files = outputDirectory.listFiles(new FilenameFilter() {
                 public boolean accept(File dir, String name) {
-                    return name.toLowerCase().endsWith(".war");
+                    return name.toLowerCase().equals("ahlan-services.war");
                 }
             });
             for (File f : files) {
